@@ -1,38 +1,210 @@
-.App {
-  text-align: center;
+:root {
+  /* Add these styles to your global stylesheet, which is used across all site pages. You only need to do this once. All elements in the library derive their variables and base styles from this central sheet, simplifying site-wide edits. For instance, if you want to modify how your h2's appear across the site, you just update it once in the global styles, and the changes apply everywhere. */
+  --primary: #ff6a3e;
+  --primaryLight: #ffba43;
+  --secondary: #ffba43;
+  --secondaryLight: #ffba43;
+  --headerColor: #1a1a1a;
+  --bodyTextColor: #4e4b66;
+  --bodyTextColorWhite: #fafbfc;
+  /* 13px - 16px */
+  --topperFontSize: clamp(0.8125rem, 1.6vw, 1rem);
+  /* 31px - 49px */
+  --headerFontSize: clamp(1.9375rem, 3.9vw, 3.0625rem);
+  --bodyFontSize: 1rem;
+  /* 60px - 100px top and bottom */
+  --sectionPadding: clamp(3.75rem, 7.82vw, 6.25rem) 1rem;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body {
+  margin: 0;
+  padding: 0;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+*, *:before, *:after {
+  /* prevents padding from affecting height and width */
+  box-sizing: border-box;
+}
+.cs-topper {
+  font-size: var(--topperFontSize);
+  line-height: 1.2em;
+  text-transform: uppercase;
+  text-align: inherit;
+  letter-spacing: .1em;
+  font-weight: 700;
+  color: var(--primary);
+  margin-bottom: 0.25rem;
+  display: block;
+}
+
+.cs-title {
+  font-size: var(--headerFontSize);
+  font-weight: 900;
+  line-height: 1.2em;
+  text-align: inherit;
+  max-width: 43.75rem;
+  margin: 0 0 1rem 0;
+  color: var(--headerColor);
+  position: relative;
+}
+
+.cs-text {
+  font-size: var(--bodyFontSize);
+  line-height: 1.5em;
+  text-align: inherit;
+  width: 100%;
+  max-width: 40.625rem;
+  margin: 0;
+  color: var(--bodyTextColor);
+}
+                          
+
+/*-- -------------------------- -->
+<---        Why Choose Us       -->
+<--- -------------------------- -*/
+/* 
+/* Mobile - 360px */
+@media only screen and (min-width: 0rem) {
+  #why-choose-1821 {
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+  }
+  #why-choose-1821 .cs-container {
+    width: 100%;
+    max-width: 106.25rem;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    z-index: 1;
+  }
+  #why-choose-1821 .cs-content {
+    text-align: center;
+    width: 100%;
+    padding: var(--sectionPadding);
+    background-color: var(--primary);
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    z-index: 1;
+  }
+  #why-choose-1821 .cs-topper {
+    color: var(--bodyTextColorWhite);
+  }
+  #why-choose-1821 .cs-title {
+    margin: 0 0 3rem;
+    max-width: 13ch;
+    color: var(--bodyTextColorWhite);
+  }
+  #why-choose-1821 .cs-picture {
+    width: 100%;
+    max-width: 36.625rem;
+    height: auto;
+    display: block;
+  }
+  #why-choose-1821 .cs-picture img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+  #why-choose-1821 .cs-card-group {
+    width: 100%;
+    max-width: 36.625rem;
+    padding: var(--sectionPadding);
+    /* 16px - 44px */
+    padding-left: clamp(1rem, 4vw, 2.75rem);
+    /* 16px - 64px */
+    padding-right: clamp(1rem, 4vw, 4rem);
+    box-sizing: border-box;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    /* 32px - 40px */
+    gap: clamp(2rem, 0.5vw, 2.5rem);
+  }
+  #why-choose-1821 .cs-item {
+    list-style: none;
+    width: 100%;
+    max-width: 36.625rem;
+    /* prevents padding from affecting height and width */
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.75rem;
+  }
+  #why-choose-1821 .cs-item-wrapper {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.75rem;
+  }
+  #why-choose-1821 .cs-icon {
+    width: 2rem;
+    height: auto;
+    display: block;
+  }
+  #why-choose-1821 .cs-h3 {
+    /* 20px - 25px */
+    font-size: clamp(1.25rem, 2vw, 1.5625rem);
+    line-height: 1.2em;
+    font-weight: 700;
+    margin: 0;
+    color: var(--headerColor);
+  }
+  #why-choose-1821 .cs-item-text {
+    font-size: 1rem;
+    line-height: 1.5em;
+    margin: 0;
+    color: var(--bodyTextColor);
   }
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+/* Tablet - 768px */
+@media only screen and (min-width: 48rem) {
+  #why-choose-1821 .cs-container {
+    flex-direction: row;
+    justify-content: center;
+    align-items: stretch;
   }
-  to {
-    transform: rotate(360deg);
+  #why-choose-1821 .cs-content {
+    text-align: left;
+    width: 100%;
+    align-items: flex-start;
+    background-color: transparent;
   }
-}
+  #why-choose-1821 .cs-content:before {
+    /* background color, moves to the section parent at desktop */
+    content: '';
+    width: 100%;
+    height: 100%;
+    background: var(--primary);
+    opacity: 1;
+    position: absolute;
+    display: block;
+    top: 0;
+    left: 0;
+    z-index: -1;
+  }
+  #why-choose-1821 .cs-picture {
+    margin-left: auto;
+    max-width: 100%;
+  }
+  #why-choose-1821 .cs-card-group {
+    width: 65%;
+    max-width: 100%;
+    /* prevents flexbox from squishing it */
+    flex: none;
+  }
+  #why-choose-1821 .cs-item {
+    flex-direction: row;
+  }
+} 
+
+                                
